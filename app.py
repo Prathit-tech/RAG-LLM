@@ -8,7 +8,7 @@ import git
 from llama_index import SimpleDirectoryReader
 
 from llama_index import VectorStoreIndex, SimpleDirectoryReader, ServiceContext
-documents = SimpleDirectoryReader("./Cloudflare.pdf").load_data()
+documents = SimpleDirectoryReader("./").load_data()
 
 
 
