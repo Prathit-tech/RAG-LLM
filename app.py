@@ -4,8 +4,18 @@ import sys
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
-from llama_index import VectorStoreIndex, SimpleDirectoryReader, ServiceContext
-documents = SimpleDirectoryReader("https://raw.githubusercontent.com/Prathit-tech/RAG-LLM/main/content/Data/").load_data()
+import git
+from llama_index import SimpleDirectoryReader
+
+# Clone the GitHub repository to a local directory
+repo_url = "https://github.com/Prathit-tech/RAG-LLM.git"
+local_path = "content/Data/"
+
+git.Repo.clone_from(repo_url, local_path)
+
+# Use SimpleDirectoryReader on the local clone
+documents = SimpleDirectoryReader(local_path).load_data()
+
 
 import torch
 
