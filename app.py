@@ -5,7 +5,7 @@ logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
 from llama_index import VectorStoreIndex, SimpleDirectoryReader, ServiceContext
-documents = SimpleDirectoryReader("Cloudflare.pdf").load_data()
+documents = SimpleDirectoryReader("").load_data()
 
 import torch
 
