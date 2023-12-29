@@ -5,7 +5,7 @@ logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
 from llama_index import VectorStoreIndex, SimpleDirectoryReader, ServiceContext
-documents = SimpleDirectoryReader("https://github.com/Prathit-tech/RAG-LLM/tree/main/content/Data").load_data()
+documents = SimpleDirectoryReader("https://raw.githubusercontent.com/Prathit-tech/RAG-LLM/main/content/Data/").load_data()
 
 import torch
 
