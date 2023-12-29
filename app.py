@@ -8,7 +8,7 @@ import git
 from llama_index import SimpleDirectoryReader
 
 from llama_index import VectorStoreIndex, SimpleDirectoryReader, ServiceContext
-documents = SimpleDirectoryReader("../").load_data()
+documents = SimpleDirectoryReader("https://github.com/Prathit-tech/RAG-LLM/blob/ca461d8a35db59c8c6e5d6098b49fd23ff811d52/content/Data/").load_data()
 
 
 
